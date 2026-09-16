@@ -1,0 +1,22 @@
+processed 1/883 75380c75d39e4c35835dfc51955fda12 replacements=29 evidence=23
+processed 2/883 acb1f6443bd64768831ad4c1e9b39f4d replacements=19 evidence=15
+processed 3/883 29b3807af4fa440897150fb83cb56e1d replacements=9 evidence=8
+processed 4/883 816a340c85cf4c9e97fcfbb513f0170e replacements=5 evidence=4
+processed 5/883 bdc96f84816344eeb71b8d5cdc1a901f replacements=6 evidence=9
+processed 6/883 c2cc38192deb4f2aba340edd1f6217bc replacements=12 evidence=8
+processed 7/883 cc19a198c50d42ebb628fdc613eedb6c replacements=12 evidence=24
+processed 8/883 1efd49eb139b4e54a520b3fcc2452bcd replacements=32 evidence=22
+processed 9/883 96c86bea59234c058d91493272affa4a replacements=59 evidence=12
+processed 10/883 7a401fd525204a319e0841bdd3eff6fd replacements=12 evidence=15
+processed 11/883 b6544434d857495a8a2de59c0faf6f0b replacements=21 evidence=12
+processed 12/883 2e6134c202e3443cb96080a8612ee2b5 replacements=25 evidence=14
+processed 13/883 4146d667271b4befa6549f951e497c68 replacements=20 evidence=29
+processed 14/883 72bde41ff35e45489c439abdfacfb2c9 replacements=27 evidence=16
+processed 15/883 70d2336935114776abefde10c36e0e62 replacements=21 evidence=20
+stopped: HTTP 429; no automatic retry
+{
+  "documents": 70,
+  "selected": 883,
+  "scope": "pending",
+  "output": "C:\\Users\\user\\Desktop\\coding\\LAWRENCE\\data\\intermediate\\google_ai\\hybrid_gemma4_experiment.jsonl"
+}

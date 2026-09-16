@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\coding\LAWRENCE\scripts\hybrid_deidentify_with_google_ai.py", line 610, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\user\Desktop\coding\LAWRENCE\scripts\hybrid_deidentify_with_google_ai.py", line 514, in main
+    plan, usage = request_json(key, args.model, prompt)
+                  ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\coding\LAWRENCE\scripts\hybrid_deidentify_with_google_ai.py", line 133, in request_json
+    envelope = json.load(response)
+  File "C:\Python313\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+                 ~~~~~~~^^
+  File "C:\Python313\Lib\http\client.py", line 473, in read
+    return self._read_chunked(amt)
+           ~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Python313\Lib\http\client.py", line 603, in _read_chunked
+    value.append(self._safe_read(chunk_left))
+                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Python313\Lib\http\client.py", line 642, in _safe_read
+    data = self.fp.read(amt)
+  File "C:\Python313\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python313\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out

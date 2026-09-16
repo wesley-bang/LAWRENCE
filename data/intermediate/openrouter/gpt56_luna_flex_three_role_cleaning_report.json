@@ -1,0 +1,38 @@
+{
+  "cleaning_version": "gpt56-luna-clean-v1",
+  "input": "C:\\Users\\user\\Desktop\\coding\\LAWRENCE\\data\\intermediate\\openrouter\\gpt56_luna_flex_three_role_bulk.jsonl",
+  "output": "C:\\Users\\user\\Desktop\\coding\\LAWRENCE\\data\\intermediate\\openrouter\\gpt56_luna_flex_three_role_cleaned.jsonl",
+  "recommended_output": "C:\\Users\\user\\Desktop\\coding\\LAWRENCE\\data\\intermediate\\openrouter\\gpt56_luna_flex_three_role_recommended.jsonl",
+  "review_output": "C:\\Users\\user\\Desktop\\coding\\LAWRENCE\\data\\intermediate\\openrouter\\gpt56_luna_flex_three_role_review.jsonl",
+  "rejected_output": "C:\\Users\\user\\Desktop\\coding\\LAWRENCE\\data\\intermediate\\openrouter\\gpt56_luna_flex_three_role_rejected.jsonl",
+  "input_records": 572,
+  "output_records": 572,
+  "missing_source_pairs": [],
+  "status_counts": {
+    "recommended": 453,
+    "needs_review": 116,
+    "rejected": 3
+  },
+  "hard_flag_counts": {
+    "non_final_interlocutory_order": 3
+  },
+  "review_flag_counts": {
+    "cross_document_fact_conflict": 85,
+    "overbroad_evidence_citation": 35,
+    "unresolved_masked_person_alias": 5
+  },
+  "info_flag_counts": {
+    "prompt_artifact_repaired": 392,
+    "target_conditioned_language_present": 120,
+    "holding_content_reextracted": 30
+  },
+  "repair_counts": {
+    "outcome_reclassification": 62,
+    "prompt_artifact_replacement": 392,
+    "legal_rule_citation_migration": 1564,
+    "holding_reextraction": 30,
+    "alias_normalization": 24,
+    "private_literal_replacement": 81
+  },
+  "generated_at": "2026-09-15T07:36:04+00:00"
+}

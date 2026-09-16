@@ -1,0 +1,12 @@
+selected=916 key=GOOGLE_STUDIO_API_KEY_2 linked_indictments=917
+processed 1/916 ac72588ea9015e3898f9ce7d2947a822ffa8f3f95a48987124ca24a204b03ad5 replacements=12 evidence=12 paired_evidence=21
+processed 2/916 b60497caf9789e29823fb9aaf89c2d4226abd24d72059d2b172d3a06e6b3e467 replacements=10 evidence=5 paired_evidence=10
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 500; retry in 300 seconds for 7764dc794c8152611ba43759c2a410fce425a482814bc0ee8eae565e06c1e7f6
+api-detail: GOOGLE_STUDIO_API_KEY_2 INTERNAL: Internal error encountered.
+processed 3/916 7764dc794c8152611ba43759c2a410fce425a482814bc0ee8eae565e06c1e7f6 replacements=15 evidence=13 paired_evidence=21
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 500; retry in 300 seconds for 09dad09e3399d6351581659c15dd008ebfe65c6cd16b43e4e68f5f51b0451398
+api-detail: GOOGLE_STUDIO_API_KEY_2 INTERNAL: Internal error encountered.
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 503; retry in 600 seconds for 09dad09e3399d6351581659c15dd008ebfe65c6cd16b43e4e68f5f51b0451398
+api-detail: GOOGLE_STUDIO_API_KEY_2 UNAVAILABLE: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 500; retry in 1200 seconds for 09dad09e3399d6351581659c15dd008ebfe65c6cd16b43e4e68f5f51b0451398
+api-detail: GOOGLE_STUDIO_API_KEY_2 INTERNAL: Internal error encountered.

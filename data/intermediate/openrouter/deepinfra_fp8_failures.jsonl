@@ -1,0 +1,1 @@
+{"pair_id": "5dd04bc170af4f258fc7173acb8d97de", "document_type": "judgment", "model": "deepseek/deepseek-v4.1-flash", "provider": "deepinfra", "quantization": "fp8", "error_type": "JSONDecodeError", "detail": "Unterminated string starting at: line 72 column 20 (char 1692)", "checkpointed_at": "2026-09-11T11:43:15+00:00"}

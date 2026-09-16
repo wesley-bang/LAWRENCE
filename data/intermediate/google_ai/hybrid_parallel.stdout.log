@@ -1,0 +1,95 @@
+workers=2 keys=GOOGLE_STUDIO_API_KEY,GOOGLE_STUDIO_API_KEY_2
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 503; retry in 300 seconds for 8b73d647feb44b249e90765ca5a18b8d
+rate-limit-detail: GOOGLE_STUDIO_API_KEY_2 UNAVAILABLE: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+processed 1/856 1a3016f6b1f4432e9f6522d3b00eaaf2 replacements=38 evidence=8
+processed 3/856 ff551b388f9146d285106d77f11a6e4c replacements=19 evidence=8
+processed 4/856 d91451a24eb34075bb601f254e7219c8 replacements=14 evidence=15
+processed 5/856 84dfe15a23d14b9783dae28e982ae016 replacements=29 evidence=21
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 500; retry in 600 seconds for 8b73d647feb44b249e90765ca5a18b8d
+rate-limit-detail: GOOGLE_STUDIO_API_KEY_2 INTERNAL: Internal error encountered.
+processed 6/856 df7195cbd2014d928daf6219f7c58e4e replacements=31 evidence=25
+processed 7/856 684fee37c464408b87cd40ba3af8d46f replacements=21 evidence=33
+processed 8/856 46ecd95394624a939bdb23993f560985 replacements=7 evidence=5
+processed 9/856 2a7949a64d4149e88ef5c8d79023797f replacements=54 evidence=14
+processed 10/856 c2355134c997496da3dbef92580403bb replacements=17 evidence=12
+processed 11/856 af8e61202aab45d89e194bfe39495c35 replacements=8 evidence=7
+processed 12/856 0975e677a7854a8ea3994fbccf3fe051 replacements=11 evidence=14
+processed 13/856 8fd16ccdaff142d5beb2e63c8f3bd507 replacements=7 evidence=15
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 500; retry in 1200 seconds for 8b73d647feb44b249e90765ca5a18b8d
+rate-limit-detail: GOOGLE_STUDIO_API_KEY_2 INTERNAL: Internal error encountered.
+processed 14/856 016041009803461a9e17a01be83588ab replacements=9 evidence=5
+processed 15/856 bb4de6e9386243309de5e2fb9d1805ed replacements=6 evidence=9
+processed 16/856 d5ca2bccd1cb4de3b12e6ab386e6761a replacements=14 evidence=15
+processed 17/856 00080c675108405dad90cda3165c804b replacements=6 evidence=11
+processed 18/856 01c1d89ff91a4ce2a859d7931fc1ae0d replacements=9 evidence=9
+processed 19/856 01dafe678b6e457eaa38b1549a5bd4f3 replacements=8 evidence=9
+processed 20/856 01f40734bc3846dcbc0bc960aea76bad replacements=9 evidence=14
+processed 21/856 02ab5c004822449fb124af97dcd7888a replacements=8 evidence=8
+processed 22/856 02e3ecadb12e443b8418a10d4c2ba599 replacements=6 evidence=13
+processed 23/856 038faf674af34d6da392bfe4632cea3b replacements=7 evidence=9
+processed 24/856 04c2135aef3749af9dee7fc1eb4e89b0 replacements=16 evidence=17
+processed 25/856 04ec1985c51b4cf88ce80520811242cf replacements=3 evidence=10
+skipped-empty 26/856 04f18e9d272647d4a00f0818ef025b28
+processed 27/856 055af96998ec40eeb8dbdec3e6ec8408 replacements=8 evidence=8
+processed 28/856 0596920a040a491bbef055a70be26df3 replacements=6 evidence=3
+processed 29/856 06345798549a41f68f2ff96283004bc0 replacements=7 evidence=5
+processed 30/856 06b8a5fc93ae4aa7bb7d9744b49b3bcb replacements=6 evidence=7
+processed 31/856 06cd9bffbc8b4d06a24d0daf282a8d8f replacements=7 evidence=26
+processed 32/856 06d515e900444fb08e643f5e852bb89c replacements=5 evidence=13
+processed 33/856 07b50f60a98246899a26bdd26ae070fb replacements=13 evidence=8
+processed 34/856 07e4e645a13a4ba2b5be46e73b738fff replacements=8 evidence=5
+processed 35/856 08033f0e50f145328c6ba58a8a37dfee replacements=14 evidence=32
+processed 36/856 08653f60a6c44cbf99955f51948a4641 replacements=9 evidence=7
+processed 37/856 08cf280d78e44c74a0c839695a82f246 replacements=6 evidence=7
+processed 38/856 093693ef73a64b8aa6f1570baa052962 replacements=6 evidence=4
+processed 39/856 096f7ed8ed844af48783c1ac5bcf664c replacements=5 evidence=8
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 500; retry in 2400 seconds for 8b73d647feb44b249e90765ca5a18b8d
+rate-limit-detail: GOOGLE_STUDIO_API_KEY_2 INTERNAL: Internal error encountered.
+processed 40/856 0a7856d12a004b539335e4e34719da78 replacements=10 evidence=13
+processed 41/856 0a849c45e2f34c758614174e9b212474 replacements=8 evidence=10
+processed 42/856 0ab9c6ddf42c4435acfc21403ccb3368 replacements=9 evidence=12
+processed 43/856 0ac3eb138a9c40578731505b62790d94 replacements=6 evidence=3
+processed 44/856 0ac7a3c735c8417d9a45fee1898ebea6 replacements=12 evidence=12
+processed 45/856 0ad649f9e33a438ea430e4546cfa178f replacements=11 evidence=7
+waiting: GOOGLE_STUDIO_API_KEY HTTP 500; retry in 300 seconds for 0ae5746a0cce4e3e8369f71b1e5ece2c
+rate-limit-detail: GOOGLE_STUDIO_API_KEY INTERNAL: Internal error encountered.
+processed 46/856 0ae5746a0cce4e3e8369f71b1e5ece2c replacements=10 evidence=10
+processed 47/856 0b9125955f0d4565945cd4076bfcce32 replacements=10 evidence=17
+processed 48/856 0b924c8d65cd485892d165793c4b066d replacements=9 evidence=19
+processed 49/856 0c314340182a47d9bdb8b1aefcadf363 replacements=7 evidence=6
+processed 50/856 0c44e6086b04453a882cb273ce9800b5 replacements=7 evidence=9
+processed 51/856 0c9a4f54053748bab24b2d4c701eb87e replacements=5 evidence=13
+processed 52/856 0d5211db04b34524af0ea5fb2f7908da replacements=2 evidence=5
+processed 53/856 0e44659319334ade87f59e04c7936b6f replacements=7 evidence=5
+processed 54/856 0e5eb33aaf0645f2876c8d501df0e9d2 replacements=4 evidence=6
+processed 55/856 0e9f86d2aef4423490162413490fc6d5 replacements=7 evidence=9
+processed 56/856 0f09bafcb66547af907262ec263a1b74 replacements=4 evidence=7
+processed 57/856 0f1230ed1fad4348ad15f822eefd7ac1 replacements=5 evidence=6
+processed 58/856 0f1437f2c4da4f229abfcaf7988cf5b2 replacements=11 evidence=11
+processed 59/856 0f2e8416b21649688de0533e1c38a1dd replacements=5 evidence=8
+processed 60/856 0f3997c6c2784eed89fa4f66c4ceadc3 replacements=7 evidence=10
+processed 61/856 0f8d81c695ae48b4a223300b854c5b16 replacements=6 evidence=10
+processed 62/856 10ab3e9033ae4678848708f358d54484 replacements=9 evidence=9
+processed 63/856 1167553cf46040f5aad72da4960fa95d replacements=4 evidence=8
+processed 64/856 11755af6b11542d1a7a1b48e809160d8 replacements=6 evidence=8
+processed 65/856 11c86b38f95e4005845b5d4bf3b5ee95 replacements=8 evidence=8
+processed 66/856 11f7e6449899469ab8f2126853f2a7c4 replacements=5 evidence=20
+processed 67/856 12127ea6df1942feb1a1f78747975f3b replacements=7 evidence=14
+processed 68/856 121dad33015143fe9ec0aa3500af93bd replacements=15 evidence=4
+processed 69/856 1271169cd0bb40089f967c0e36833528 replacements=10 evidence=22
+processed 70/856 12e77ffca28943bd943630c4305f12de replacements=8 evidence=17
+processed 71/856 12f37f1143b845199e207d8ee806c414 replacements=10 evidence=7
+processed 72/856 1316ca6f85ad49028ecbd04ffb54d01c replacements=4 evidence=5
+processed 73/856 13479ab27c814274a3fd4b0e20ae44cb replacements=7 evidence=5
+processed 74/856 1377edf58d894b7fa71a66af4d829fe0 replacements=9 evidence=11
+processed 75/856 138fbf37eb364e84bc0c5022144e86e1 replacements=9 evidence=5
+processed 76/856 13a616ea5c1f47a48426d193c663f11b replacements=6 evidence=6
+processed 77/856 140b8ef7f242418a84b0580e23f10a6d replacements=10 evidence=4
+processed 78/856 142ff89d33874670b3720aa2291cb35f replacements=5 evidence=5
+processed 79/856 14c5cb90f7ba403cad454951ad72fbbf replacements=8 evidence=11
+processed 80/856 14d22dd64941476a90853915251920a0 replacements=9 evidence=10
+processed 81/856 14d63bdfc997410c91731a04ee0b4681 replacements=3 evidence=9
+processed 82/856 14ece5a11f67451ab49c2ee1e3cd304e replacements=17 evidence=15
+processed 83/856 1516304c11a64a76a8b6b6ff162ce428 replacements=5 evidence=7
+processed 84/856 15209fd72ae04dc5a0ade05bb14fcefb replacements=3 evidence=3
+processed 85/856 153c81d3fb0b43f8a2b03ed952126646 replacements=5 evidence=12

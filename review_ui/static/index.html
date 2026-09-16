@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>起訴書去識別化人工審查</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">LAWRENCE · LOCAL REVIEW</p>
+      <h1>起訴書去識別化審查台</h1>
+    </div>
+    <div class="header-actions">
+      <label class="reviewer-label">審查者<input id="reviewer" maxlength="100" placeholder="姓名或代號"></label>
+      <button class="button ghost" id="exportCsv">匯出 CSV</button>
+      <button class="button ghost" id="exportJsonl">匯出 JSONL</button>
+    </div>
+  </header>
+
+  <section class="progress-strip">
+    <div><strong id="doneCount">0</strong><span>已審</span></div>
+    <div><strong id="pendingCount">0</strong><span>待審</span></div>
+    <div><strong id="passCount">0</strong><span>通過</span></div>
+    <div><strong id="failCount">0</strong><span>退回</span></div>
+    <div class="progress-bar"><i id="progressFill"></i></div>
+  </section>
+
+  <main class="layout">
+    <aside class="queue-panel">
+      <div class="scope-switch" role="group" aria-label="資料範圍">
+        <button data-scope="sample" class="active">抽樣</button>
+        <button data-scope="all">全部資料</button>
+      </div>
+      <div class="filters">
+        <input id="search" type="search" placeholder="搜尋來源代碼、案由或文件 ID">
+        <select id="statusFilter">
+          <option value="pending">待審</option>
+          <option value="all">全部狀態</option>
+          <option value="pass">通過</option>
+          <option value="fail">退回</option>
+          <option value="follow_up">待確認</option>
+        </select>
+        <select id="typeFilter"><option value="">全部案由</option></select>
+      </div>
+      <div class="queue-meta"><span id="queueCount">0 筆</span><button id="sampleSettings">抽樣設定</button></div>
+      <nav id="caseList" class="case-list" aria-label="審查佇列"></nav>
+    </aside>
+
+    <section class="workspace">
+      <div id="emptyState" class="empty-state">
+        <div class="empty-mark">✓</div>
+        <h2>目前篩選條件下沒有待審案件</h2>
+        <p>可切換狀態或範圍查看其他紀錄。</p>
+      </div>
+
+      <div id="reviewView" hidden>
+        <div class="case-heading">
+          <div>
+            <div class="badges"><span id="caseType" class="badge"></span><span id="sampleRank" class="badge muted"></span></div>
+            <h2 id="sourceJid"></h2>
+            <code id="docId"></code>
+          </div>
+          <div class="pager"><button id="prevCase" title="上一筆 (←)">←</button><button id="nextCase" title="下一筆 (→)">→</button></div>
+        </div>
+
+        <div class="audit-summary" id="auditSummary"></div>
+        <details class="evidence-panel" open>
+          <summary>本地模型 Verify <span id="modelIssueCount"></span></summary>
+          <div id="modelIssueList"></div>
+        </details>
+        <details class="evidence-panel" open>
+          <summary>結構化證物 <span id="evidenceCount"></span></summary>
+          <div id="evidenceList"></div>
+        </details>
+        <details class="evidence-panel" open>
+          <summary>Google AI 31B 精查 <span id="googleAiStatus"></span></summary>
+          <div id="googleAiSummary"></div>
+        </details>
+        <details class="evidence-panel direct-experiment" id="directExperimentPanel" hidden>
+          <summary>純 LLM 全文實驗 <span id="directLlmStatus"></span></summary>
+          <div id="directLlmResult"></div>
+        </details>
+        <details class="evidence-panel direct-experiment" id="twoPassPanel" hidden open>
+          <summary>多階段 LLM 最終實驗 <span id="twoPassStatus"></span></summary>
+          <div id="twoPassResult"></div>
+        </details>
+        <details class="evidence-panel direct-experiment" id="hybridPanel" hidden open>
+          <summary>LLM 分析＋確定性替換 <span id="hybridStatus"></span></summary>
+          <div id="hybridResult"></div>
+        </details>
+        <details class="evidence-panel">
+          <summary>犯罪事實原段 <span id="crimeFactsCount"></span></summary>
+          <div><p id="crimeFactsText" class="structured-text"></p></div>
+        </details>
+        <details class="evidence-panel" open>
+          <summary>犯罪事實摘要與證據 <span id="physicalEvidenceCount"></span></summary>
+          <div id="structuredExtraction"></div>
+        </details>
+        <div class="document-grid">
+          <article class="document-card restricted">
+            <header><div><span class="status-dot amber"></span>正規化原文 <em>Restricted</em></div><button data-copy="normalizedText">複製</button></header>
+            <div id="normalizedText" class="document-text"></div>
+          </article>
+          <article class="document-card clean">
+            <header><div><span class="status-dot green"></span>去識別化結果</div><button data-copy="cleanText">複製</button></header>
+            <div id="cleanText" class="document-text"></div>
+          </article>
+        </div>
+
+        <section class="review-form">
+          <div class="form-title"><div><h3>審查紀錄</h3><p id="saveStatus">尚未儲存</p></div><button class="history-toggle" id="historyToggle">歷史紀錄</button></div>
+          <div id="historyPanel" class="history-panel" hidden></div>
+          <div class="decision-row" role="radiogroup" aria-label="審查決定">
+            <label class="decision pass"><input type="radio" name="decision" value="pass"><span>✓ 通過</span><small>沒有可識別資訊，語意正常</small></label>
+            <label class="decision fail"><input type="radio" name="decision" value="fail"><span>× 退回</span><small>存在隱私洩漏或語意問題</small></label>
+            <label class="decision follow"><input type="radio" name="decision" value="follow_up"><span>? 待確認</span><small>需要第二位審查者判斷</small></label>
+          </div>
+          <div class="form-columns">
+            <fieldset><legend>問題類型（可複選）</legend><div id="issueOptions" class="issue-grid"></div></fieldset>
+            <fieldset><legend>嚴重程度</legend><select id="severity"><option value="none">無</option><option value="minor">輕微</option><option value="major">重大</option><option value="critical">嚴重隱私風險</option></select></fieldset>
+          </div>
+          <label class="notes-label">備註<textarea id="notes" rows="4" maxlength="10000" placeholder="記錄殘留文字、位置、建議修改方式……"></textarea></label>
+          <div class="save-row"><span>快捷鍵：1 通過 · 2 退回 · 3 待確認 · Ctrl/⌘ + Enter 儲存</span><button id="saveReview" class="button primary">儲存並前往下一筆</button></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="sampleDialog">
+    <form method="dialog" id="sampleForm">
+      <button class="dialog-close" value="cancel" aria-label="關閉">×</button>
+      <p class="eyebrow">REPRODUCIBLE SAMPLE</p><h2>重新建立抽樣清單</h2>
+      <p>使用文件 ID 與種子產生可重現的隨機樣本。既有審查紀錄不會被刪除。</p>
+      <label>樣本數<input id="sampleSize" type="number" min="1" max="1000" required></label>
+      <label>抽樣種子<input id="sampleSeed" maxlength="100" required></label>
+      <menu><button value="cancel" class="button ghost">取消</button><button id="applySample" value="default" class="button primary">套用</button></menu>
+    </form>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

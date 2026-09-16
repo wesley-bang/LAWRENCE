@@ -1,0 +1,17 @@
+{
+  "dataset": "indictments_114_ai_enriched_pilot",
+  "documents": 10,
+  "complete": 10,
+  "model": "gemma-4-31b-it",
+  "billing_mode": "free-only Gemma 4 model allowlist",
+  "request_limit": 10,
+  "delay_seconds": 15.0,
+  "usage_metadata_totals": {
+    "promptTokenCount": 42919,
+    "candidatesTokenCount": 5705,
+    "totalTokenCount": 48624
+  },
+  "external_data_flow": "selected normalized and deterministic-clean text sent to Google Gemini API",
+  "human_review_required": true,
+  "canonical_corpus_replaced": false
+}

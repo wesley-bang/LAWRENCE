@@ -1,0 +1,12 @@
+{
+  "total_scheduled": 879,
+  "completed": 571,
+  "failed": 136,
+  "skipped": 0,
+  "roles_checkpointed": 1859,
+  "actual_cost_usd": 5.3983664,
+  "reserved_cost_usd": 0.02907575,
+  "max_total_cost_usd": 15.0,
+  "stopped_by_cost_cap": false,
+  "updated_at": "2026-09-15T00:14:02+00:00"
+}

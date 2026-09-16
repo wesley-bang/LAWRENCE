@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>起訴書去識別化檢閱</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div><p class="eyebrow">LAWRENCE · HUMAN REVIEW</p><h1>起訴書去識別化檢閱</h1></div>
+    <div class="actions">
+      <button id="importButton" class="secondary">匯入紀錄</button>
+      <button id="exportButton">匯出紀錄</button>
+      <input id="importFile" type="file" accept="application/json" hidden>
+    </div>
+  </header>
+  <div class="notice">左側為公開來源的正規化原文，右側為待審去識別化結果。網站不含人工舊備註或實體對照表；審查結果只存在目前瀏覽器，請定期匯出。</div>
+  <main class="layout">
+    <aside>
+      <input id="search" type="search" placeholder="搜尋案由或文件代碼">
+      <select id="decisionFilter">
+        <option value="all">全部狀態</option><option value="pending">尚未審查</option>
+        <option value="pass">通過</option><option value="fail">退回</option><option value="follow_up">待確認</option>
+      </select>
+      <div id="stats" class="stats"></div>
+      <div id="caseList" class="case-list"></div>
+    </aside>
+    <section id="workspace" class="workspace" hidden>
+      <div class="case-heading"><div><p id="position" class="eyebrow"></p><h2 id="caseType"></h2><code id="docId"></code></div>
+        <div><button id="previous" class="secondary">上一筆</button><button id="next" class="secondary">下一筆</button></div>
+      </div>
+      <details open><summary>犯罪事實摘要 <span id="summaryCount"></span></summary><div id="summaries" class="cards"></div></details>
+      <details open><summary>證據 <span id="evidenceCount"></span></summary><div id="evidence" class="cards evidence"></div></details>
+      <details open><summary>全文左右對照</summary>
+        <div class="document-grid">
+          <article class="document-card original"><header>正規化原文 <em>Public source</em></header><div id="originalText" class="document"></div></article>
+          <article class="document-card clean"><header>去識別化結果</header><div id="cleanText" class="document"></div></article>
+        </div>
+      </details>
+      <section class="review">
+        <h3>審查紀錄</h3>
+        <div class="decision-row">
+          <label><input type="radio" name="decision" value="pass"> 通過</label>
+          <label><input type="radio" name="decision" value="fail"> 退回</label>
+          <label><input type="radio" name="decision" value="follow_up"> 待確認</label>
+        </div>
+        <label>嚴重程度<select id="severity"><option value="none">無</option><option value="minor">輕微</option><option value="major">重大</option><option value="critical">嚴重洩漏</option></select></label>
+        <label>備註<textarea id="notes" rows="5" placeholder="記錄漏網、錯遮罩、摘要或證據問題"></textarea></label>
+        <button id="save">儲存並下一筆</button><span id="saveStatus"></span>
+      </section>
+    </section>
+    <section id="empty" class="empty"><h2>載入資料中…</h2></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

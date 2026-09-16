@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>案件配對去識別化審核台</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">L</span>
+      <div><p>LAWRENCE · PAIRED REVIEW</p><h1>案件配對審核台</h1></div>
+    </div>
+    <div class="header-actions">
+      <label>審查者<input id="reviewer" maxlength="100" placeholder="姓名或代號"></label>
+      <button class="button ghost" id="syncData">同步最新結果</button>
+      <button class="button ghost" id="exportCsv">匯出 CSV</button>
+      <button class="button ghost" id="exportJsonl">匯出 JSONL</button>
+    </div>
+  </header>
+
+  <section class="metrics">
+    <div><strong id="totalCount">0</strong><span>可審案件</span></div>
+    <div><strong id="pendingCount">0</strong><span>待審</span></div>
+    <div><strong id="passCount">0</strong><span>通過</span></div>
+    <div><strong id="failCount">0</strong><span>退回</span></div>
+    <div><strong id="auditPassCount">0</strong><span>AI Pass</span></div>
+    <div><strong id="auditReviewCount">0</strong><span>AI Review</span></div>
+    <div><strong id="auditFailCount">0</strong><span>AI Fail</span></div>
+    <div><strong id="evidenceTotal">0</strong><span>整合事證</span></div>
+    <div class="progress-track"><i id="progressFill"></i></div>
+  </section>
+
+  <main class="shell">
+    <aside class="sidebar">
+      <div class="filters">
+        <input id="search" type="search" placeholder="搜尋案由、法院或案號">
+        <div class="filter-row">
+          <select id="statusFilter">
+            <option value="pending">待審</option>
+            <option value="all">全部狀態</option>
+            <option value="pass">通過</option>
+            <option value="fail">退回</option>
+            <option value="follow_up">待確認</option>
+          </select>
+          <select id="typeFilter"><option value="">全部案由</option></select>
+        </div>
+        <select id="auditFilter">
+          <option value="all">全部 Gemini 狀態</option>
+          <option value="pass">Gemini：Pass</option>
+          <option value="review">Gemini：Review</option>
+          <option value="fail">Gemini：Fail</option>
+          <option value="api_failure">Gemini：API failure</option>
+          <option value="unaudited">Gemini：尚未審核</option>
+        </select>
+      </div>
+      <div class="queue-heading"><span id="queueCount">0 個案件 pair</span><small>以判決完成時間排序</small></div>
+      <nav id="caseList" class="case-list" aria-label="案件配對審核佇列"></nav>
+    </aside>
+
+    <section class="workspace">
+      <div id="emptyState" class="empty-state">
+        <span>✓</span><h2>目前沒有符合條件的案件</h2>
+        <p>判決書仍在產生時，可按右上角「同步最新結果」。</p>
+      </div>
+
+      <div id="reviewView" hidden>
+        <section class="case-header">
+          <div>
+            <div class="badges"><span id="caseType" class="badge primary"></span><span id="courtName" class="badge"></span><span id="documentType" class="badge"></span></div>
+            <h2 id="courtCaseNo"></h2>
+            <p>PAIR <code id="pairId"></code> · 更新 <time id="sourceUpdated"></time></p>
+          </div>
+          <div class="pager"><button id="prevCase" title="上一筆 (←)">←</button><span id="position">0 / 0</span><button id="nextCase" title="下一筆 (→)">→</button></div>
+        </section>
+
+        <section class="entity-band">
+          <div><span class="section-kicker">跨文書人物代號</span><div id="entityList" class="entity-list"></div></div>
+          <div class="quality-flags"><span><b id="factCount">0</b> 犯罪事實</span><span><b id="evidenceCount">0</b> 事證物證</span></div>
+        </section>
+
+        <section id="auditPanel" class="audit-panel">
+          <header>
+            <div><span class="section-kicker">GEMINI 3.8 AUDIT</span><h3>AI 稽核意見</h3></div>
+            <div class="audit-summary"><span id="auditBadge" class="audit-status unaudited">尚未審核</span><small id="auditMeta"></small></div>
+          </header>
+          <div id="auditOverall" class="audit-overall"></div>
+          <div id="auditSections" class="audit-sections"></div>
+          <details id="auditRules"><summary>確定性規則檢查</summary><div id="auditRuleContent"></div></details>
+        </section>
+
+        <section class="insight-grid">
+          <article class="panel facts-panel">
+            <header><div><span class="section-kicker">FACT MATRIX</span><h3>整合犯罪事實</h3></div><span class="hint">標籤顯示資料來源</span></header>
+            <div id="factsList" class="facts-list"></div>
+          </article>
+          <article class="panel evidence-panel">
+            <header><div><span class="section-kicker">EVIDENCE MAP</span><h3>整合事證與物證</h3></div><select id="evidenceFilter" aria-label="篩選證據來源"><option value="all">全部來源</option><option value="both">兩邊皆有</option><option value="indictment">起訴書</option><option value="judgment">判決書</option></select></header>
+            <div id="evidenceList" class="evidence-list"></div>
+          </article>
+        </section>
+
+        <section class="document-section indictment-section">
+          <header class="document-section-title">
+            <div><span class="doc-index">01</span><div><span class="section-kicker">INDICTMENT</span><h3>起訴書全文對照</h3></div></div>
+            <label class="sync-scroll"><input type="checkbox" data-sync="indictment" checked> 同步捲動</label>
+          </header>
+          <div class="document-grid">
+            <article class="document-card raw"><header><span><i></i>正規化原文 <em>Restricted</em></span><button data-copy="indictmentRaw">複製</button></header><div id="indictmentRaw" class="document-text"></div></article>
+            <article class="document-card clean"><header><span><i></i>去識別化文本</span><button data-copy="indictmentClean">複製</button></header><div id="indictmentClean" class="document-text"></div></article>
+          </div>
+        </section>
+
+        <section class="document-section judgment-section">
+          <header class="document-section-title">
+            <div><span class="doc-index">02</span><div><span class="section-kicker">JUDGMENT</span><h3>判決書全文對照</h3></div></div>
+            <label class="sync-scroll"><input type="checkbox" data-sync="judgment" checked> 同步捲動</label>
+          </header>
+          <div class="document-grid">
+            <article class="document-card raw"><header><span><i></i>正規化原文 <em>Restricted</em></span><button data-copy="judgmentRaw">複製</button></header><div id="judgmentRaw" class="document-text"></div></article>
+            <article class="document-card clean"><header><span><i></i>去識別化文本</span><button data-copy="judgmentClean">複製</button></header><div id="judgmentClean" class="document-text"></div></article>
+          </div>
+        </section>
+
+        <section class="review-form">
+          <header><div><span class="section-kicker">HUMAN DECISION</span><h3>案件 pair 審查結論</h3><p id="saveStatus">尚未審查</p></div><button id="historyToggle" class="text-button">歷史紀錄</button></header>
+          <div id="historyPanel" class="history-panel" hidden></div>
+          <div class="decision-row" role="radiogroup" aria-label="審查決定">
+            <label class="decision pass"><input type="radio" name="decision" value="pass"><span>通過</span><small>兩份文本與整合資料均正確</small></label>
+            <label class="decision fail"><input type="radio" name="decision" value="fail"><span>退回</span><small>隱私、代號或內容存在錯誤</small></label>
+            <label class="decision follow"><input type="radio" name="decision" value="follow_up"><span>待確認</span><small>需要第二位審查者判斷</small></label>
+          </div>
+          <div class="form-grid">
+            <fieldset><legend>問題類型（可複選）</legend><div id="issueOptions" class="issue-grid"></div></fieldset>
+            <fieldset><legend>嚴重程度</legend><select id="severity"><option value="none">無</option><option value="minor">輕微</option><option value="major">重大</option><option value="critical">嚴重隱私風險</option></select></fieldset>
+          </div>
+          <label class="notes-label">審查備註<textarea id="notes" rows="4" maxlength="10000" placeholder="記錄哪一份文書、殘留文字、代號衝突、漏列證據或建議修正方式……"></textarea></label>
+          <footer><span>快捷鍵：1 通過 · 2 退回 · 3 待確認 · Ctrl/⌘ + Enter 儲存</span><button id="saveReview" class="button primary">儲存並前往下一案</button></footer>
+        </section>
+      </div>
+    </section>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

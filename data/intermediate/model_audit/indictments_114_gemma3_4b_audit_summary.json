@@ -1,0 +1,10 @@
+{
+  "model": "gemma3:4b",
+  "documents": 100,
+  "complete": 100,
+  "flagged": 0,
+  "actionable_issues": 0,
+  "raw_model_issues": 569,
+  "policy": "advisory_only_human_review_required",
+  "source_text": "clean_deidentified_text_only"
+}

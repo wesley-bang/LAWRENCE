@@ -1,0 +1,82 @@
+workers=2 keys=GOOGLE_STUDIO_API_KEY,GOOGLE_STUDIO_API_KEY_2
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 503; retry in 300 seconds for 1554eeec3849443a9e0679e6dd390fb4
+rate-limit-detail: GOOGLE_STUDIO_API_KEY_2 UNAVAILABLE: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+processed 1/772 8b73d647feb44b249e90765ca5a18b8d replacements=34 evidence=29
+processed 3/772 157f74c8a9a04c63949b23a6a8ac5678 replacements=5 evidence=3
+processed 4/772 15a9aaa15dfa42c593cb7524ff9b61df replacements=7 evidence=9
+processed 5/772 162b7383c74c480b9d974cc33db9b74f replacements=3 evidence=8
+processed 6/772 1737667a0b904d0e9f52370732d59d85 replacements=7 evidence=10
+processed 7/772 17acd824ec254a92bb59ca3e8569c8b9 replacements=7 evidence=6
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 500; retry in 600 seconds for 1554eeec3849443a9e0679e6dd390fb4
+rate-limit-detail: GOOGLE_STUDIO_API_KEY_2 INTERNAL: Internal error encountered.
+processed 8/772 17df5ce64fa14591a523140d13c809a3 replacements=7 evidence=8
+processed 9/772 181d82a495eb4ed6bdebca646a42a060 replacements=7 evidence=12
+processed 10/772 182d10952fe14b1f9e0a22f55df2078b replacements=9 evidence=10
+processed 11/772 1941145252de4e69aaba9c8147b37a35 replacements=15 evidence=15
+processed 12/772 1973d4b4b55f4ac0bed1c42183eced56 replacements=5 evidence=4
+processed 13/772 19855930fff343648617f7159f8be188 replacements=5 evidence=5
+processed 14/772 19c9c21ef6bf4a11b8044fb4df33ac64 replacements=14 evidence=13
+processed 15/772 1a89f97dd7424d59835fe7501aed983c replacements=7 evidence=9
+processed 16/772 1a9bc1ccb9ce4406ab31797d15f0b499 replacements=9 evidence=6
+processed 17/772 1addca8ad27b4966a6a7efbc8dc565c7 replacements=8 evidence=5
+processed 18/772 1ae23e3dff4344798a9743a2893b825d replacements=11 evidence=15
+processed 19/772 1b215ca1f44a48c8883d3cd37d6f4f5e replacements=4 evidence=3
+processed 20/772 1b6a7c08e2da4621a6c5e7ae96171b42 replacements=7 evidence=11
+processed 21/772 1bbebdd93f5c40ebb6e1dd5f378b9df9 replacements=3 evidence=8
+processed 22/772 1bc150f27a56415ebf53e9e41fa7fb34 replacements=14 evidence=7
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 503; retry in 1200 seconds for 1554eeec3849443a9e0679e6dd390fb4
+rate-limit-detail: GOOGLE_STUDIO_API_KEY_2 UNAVAILABLE: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+processed 23/772 1bc3d42ddc404ec78329054973dcc9d4 replacements=8 evidence=9
+processed 24/772 1c17ba6ebb314229b76d890553f1eb2f replacements=11 evidence=13
+processed 25/772 1ca178dd60b44089bec3044e9a4df177 replacements=8 evidence=7
+processed 26/772 1d5827d77812446fa6d1a394963db152 replacements=5 evidence=6
+processed 27/772 1e10037ff6e14b9480c04e09bb4f2da8 replacements=5 evidence=8
+processed 28/772 1e62f371f25b4ba3a7eea79948c9b92c replacements=5 evidence=10
+processed 29/772 1f3f0f9b8e2a4ba2a2ce40a4a18fd8c3 replacements=3 evidence=5
+processed 30/772 1f7d177f590d4a5c95bf17cfa3348685 replacements=5 evidence=5
+processed 31/772 1f856c3d9c8a4b97afe763331b47bfc0 replacements=8 evidence=6
+processed 32/772 1f939ab8bf8344299dcbaaba0152cbf9 replacements=6 evidence=11
+processed 33/772 1fcf1724fe364171bce9ce7b1ea9472e replacements=4 evidence=6
+processed 34/772 205d602af498451d8327db54e172b5a4 replacements=9 evidence=8
+processed 35/772 20649de14b8045e8bc2c2b7483788cbd replacements=9 evidence=15
+processed 36/772 208f85ab0da249d3903371b3d3d0e898 replacements=6 evidence=11
+processed 37/772 20a9aec391b944b0af0e70fbc3a2bf1a replacements=6 evidence=5
+processed 38/772 21abe6fcde804941a4905d40aaf700d9 replacements=19 evidence=12
+processed 39/772 21d83453b63d47a0b266332626e3183d replacements=7 evidence=11
+processed 40/772 22982140960d458ea2a30cb946353a96 replacements=8 evidence=10
+processed 41/772 22990d9e5d71415fbd8947e1ed81dc8d replacements=7 evidence=4
+processed 42/772 22a2b66d96104e5e812975744c08e5b5 replacements=7 evidence=4
+processed 43/772 22b2cfe8d4f043f785b97d34dd44a7a0 replacements=3 evidence=7
+processed 44/772 22feecaf8a7145eba335417770301e88 replacements=3 evidence=6
+processed 45/772 233ea8ca2fff4edabe04158198fbac8f replacements=3 evidence=3
+processed 46/772 23f1f353ef1a447a878d409bbcb76875 replacements=7 evidence=5
+processed 47/772 23feff7d091c41348b310382c2037492 replacements=6 evidence=10
+processed 48/772 243418e181fa40c3982e30c0409a4088 replacements=6 evidence=10
+processed 49/772 246688472339449ebf06f75f20be1d3f replacements=5 evidence=9
+processed 50/772 247852c02aa24675b05b877d3df96c9c replacements=9 evidence=5
+processed 51/772 25124152f2bd40bf8cc2e2c7813a35f4 replacements=5 evidence=6
+processed 52/772 253581fa59f94b91b3757789bac25d0c replacements=10 evidence=9
+processed 53/772 25605dd5d1ad4ed79d7f1725a6601da7 replacements=2 evidence=8
+processed 54/772 259fd7f937ef4064a022a45636fc815b replacements=6 evidence=8
+deferred: GOOGLE_STUDIO_API_KEY_2 HTTP 500 after 4 attempts for 1554eeec3849443a9e0679e6dd390fb4
+skipped-transient 2/772 1554eeec3849443a9e0679e6dd390fb4
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 503; retry in 300 seconds for 25ef5f46e7494b64a63f7d63444fc790
+rate-limit-detail: GOOGLE_STUDIO_API_KEY_2 UNAVAILABLE: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+processed 55/772 25b3deea1ccb46bc8450d70475f5a228 replacements=4 evidence=8
+processed 57/772 27680a085281429682de199fb217a18c replacements=13 evidence=8
+processed 58/772 276e089c00af430caf2ecf3c789a84f0 replacements=7 evidence=3
+processed 59/772 276e4d90ac6d47d8af0999eda77478a5 replacements=5 evidence=12
+processed 60/772 27d64433d6af49ebade6c47c7237e8fd replacements=8 evidence=7
+processed 61/772 2803cde319154e208051ed44d302d1da replacements=11 evidence=10
+processed 62/772 2804552cf67a4aeaa04ed72c34a43b1e replacements=7 evidence=16
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 500; retry in 600 seconds for 25ef5f46e7494b64a63f7d63444fc790
+rate-limit-detail: GOOGLE_STUDIO_API_KEY_2 INTERNAL: Internal error encountered.
+processed 63/772 28949c61a15d4613a310b6c4cb10784c replacements=8 evidence=9
+processed 64/772 28b79e7885b0437a9d21ef8b21e67c05 replacements=4 evidence=15
+processed 65/772 28bdd209739a41f0bb193630c16818a1 replacements=7 evidence=16
+processed 66/772 28bea211307a47128094b70121020026 replacements=8 evidence=6
+processed 67/772 28c8412ad48c462ea1b02acdb15b2832 replacements=5 evidence=7
+processed 68/772 28d026a64569404ba282d37c47617d63 replacements=8 evidence=14
+processed 69/772 28e6726bc79a476cbe7da08609b9b8a1 replacements=8 evidence=4
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 503; retry in 1200 seconds for 25ef5f46e7494b64a63f7d63444fc790
+rate-limit-detail: GOOGLE_STUDIO_API_KEY_2 UNAVAILABLE: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.

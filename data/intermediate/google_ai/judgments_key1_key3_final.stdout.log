@@ -1,0 +1,55 @@
+selected=33 workers=2 keys=GOOGLE_STUDIO_API_KEY,GOOGLE_STUDIO_API_KEY_3 linked_indictments=927
+processed 2/33 c6962ec29219e4c1b720b3bb2d70b3d144d7a936a7fa43ac73fd4e6212de23b8 key=GOOGLE_STUDIO_API_KEY_3 replacements=9 evidence=7 paired_evidence=12
+processed 1/33 6020fd794f2401761ef115723310255e74b04533f757dc9c94b4a585a6601f13 key=GOOGLE_STUDIO_API_KEY replacements=15 evidence=9 paired_evidence=15
+processed 4/33 7139a3d874bc96bdcc01b87622d10fa641f30f2befab5dc28f6a4c92693ec626 key=GOOGLE_STUDIO_API_KEY replacements=12 evidence=7 paired_evidence=12
+processed 3/33 37a3b2d561864c5e71cf396c1911cbeddb768463fa441ae55176f81a562c77af key=GOOGLE_STUDIO_API_KEY_3 replacements=13 evidence=19 paired_evidence=33
+processed 5/33 a14b32dfead992907bd74be3e014c3b2847a48c5c24b8d25c32d89f4f4aef6ae key=GOOGLE_STUDIO_API_KEY replacements=11 evidence=6 paired_evidence=13
+processed 7/33 311b236d2dbe7fc622d94dc4ca6717d5d7700c4c223e16b49bda2ff5ac3da98e key=GOOGLE_STUDIO_API_KEY replacements=10 evidence=2 paired_evidence=7
+processed 6/33 21661a2a30669efdb03e1a6e74214a58731720162bb838ec14d47f8096adecdd key=GOOGLE_STUDIO_API_KEY_3 replacements=12 evidence=6 paired_evidence=12
+processed 8/33 8172aef7c3b702009807f2a89cbc415410eb846709909be19caaa8174f3d354d key=GOOGLE_STUDIO_API_KEY replacements=13 evidence=8 paired_evidence=15
+processed 10/33 2d85f705de9ab67062b3358fb833dbb5623819c833fd945cd5eb3b68504508dc key=GOOGLE_STUDIO_API_KEY replacements=9 evidence=1 paired_evidence=8
+processed 9/33 bdba12df01afd967f6365dcdc0e5d0c503cd0848348c6ca815c7eec4fc525714 key=GOOGLE_STUDIO_API_KEY_3 replacements=15 evidence=5 paired_evidence=9
+processed 11/33 132bb8d9c419f3d849895fa9a1b62e979bad2b27169c1340e1d16b9909d468a6 key=GOOGLE_STUDIO_API_KEY replacements=11 evidence=11 paired_evidence=20
+processed 12/33 c31c3cbea56cb7fe365cb356c28fa8e250d6ff71b6a5ac02e5cc0e98293d45fb key=GOOGLE_STUDIO_API_KEY_3 replacements=15 evidence=11 paired_evidence=17
+waiting: GOOGLE_STUDIO_API_KEY_3 HTTP 503; retry in 300 seconds for 1d98c7c11726fc7faf144f4c033d387378548a9e8b7d11e05ea12785a6c7988c
+api-detail: GOOGLE_STUDIO_API_KEY_3 UNAVAILABLE: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.
+processed 13/33 9b1bc3dd3ecb13a6f936b24764faa412921873dc0d6caa9cda96292ef454b934 key=GOOGLE_STUDIO_API_KEY replacements=14 evidence=8 paired_evidence=20
+processed 15/33 7aefe69daec67323c63df817a1841d830bac1681a99a50acb9400e19421006eb key=GOOGLE_STUDIO_API_KEY replacements=6 evidence=2 paired_evidence=5
+processed 16/33 e1c7e800d12086365717db32b1b45f43502c7297cbbb87374cacfde3e3c1d04c key=GOOGLE_STUDIO_API_KEY replacements=17 evidence=7 paired_evidence=14
+processed 17/33 77a0128e514207a78c534c5ba296f510394ee8c518f53021de9961be658cdf7b key=GOOGLE_STUDIO_API_KEY replacements=20 evidence=27 paired_evidence=48
+processed 18/33 9edfdcf78ee7e3448c58215b8b3589d60166baa8002362b3e83ebc2537addb0e key=GOOGLE_STUDIO_API_KEY replacements=13 evidence=8 paired_evidence=17
+processed 19/33 c8103c1d2e24e246ff29d22041e328b44fe64ece3646179409c9443f619119ed key=GOOGLE_STUDIO_API_KEY replacements=11 evidence=6 paired_evidence=15
+processed 20/33 eb5299390b995884c0e912a1be715f7f0311dba9b7648736f4321257f51a1c05 key=GOOGLE_STUDIO_API_KEY replacements=13 evidence=3 paired_evidence=13
+processed 21/33 51a9a746e2215263df26c90756e3ed0cda1c931cf707f22a82f12b07cd78ca1a key=GOOGLE_STUDIO_API_KEY replacements=10 evidence=10 paired_evidence=19
+processed 14/33 1d98c7c11726fc7faf144f4c033d387378548a9e8b7d11e05ea12785a6c7988c key=GOOGLE_STUDIO_API_KEY_3 replacements=21 evidence=23 paired_evidence=39
+processed 22/33 a49dbc128fc3c36e65552951ac169921782edda0d8f28651caf6e0cd0fdeb182 key=GOOGLE_STUDIO_API_KEY replacements=6 evidence=2 paired_evidence=9
+waiting: GOOGLE_STUDIO_API_KEY_3 HTTP 500; retry in 300 seconds for 42518c527a941610268fefa9410a1bd3ee31cb89fa30557f2414c2c3610c0464
+api-detail: GOOGLE_STUDIO_API_KEY_3 INTERNAL: Internal error encountered.
+processed 24/33 3fb186ae9201bfb73932eb1ea1d0a8453f111116b79d41f94ab785601472a080 key=GOOGLE_STUDIO_API_KEY replacements=18 evidence=20 paired_evidence=29
+processed 25/33 61dc9f4d0f18189e09c7b24ba35c334bfbef5331959411b07a8c113beedfc063 key=GOOGLE_STUDIO_API_KEY replacements=10 evidence=6 paired_evidence=9
+processed 26/33 def59a7ee80d7a47c46fa372c54cd74239f0efdf2359a762df9a540340cb405d key=GOOGLE_STUDIO_API_KEY replacements=8 evidence=2 paired_evidence=12
+processed 27/33 74c7f2afc304a70415f9b8dfa0c4c450a41467f43ec322850b4ea8ccab7d23f3 key=GOOGLE_STUDIO_API_KEY replacements=15 evidence=8 paired_evidence=15
+skipped-empty 28/33 4c013f7534b4d973b50e82190ec8a2104587c97bae8a4f401154601efc54b129 key=GOOGLE_STUDIO_API_KEY
+processed 29/33 5bcd211a429eb6a992dd56a357e3c8482fc63fe33dd859b06977ccdc11684c60 key=GOOGLE_STUDIO_API_KEY replacements=13 evidence=6 paired_evidence=14
+processed 30/33 3b40f2f974f0adf85b326a331fa236fbcca7d15de75a99ae71e8be6ea254b94e key=GOOGLE_STUDIO_API_KEY replacements=17 evidence=17 paired_evidence=29
+processed 31/33 06324bf709a1f592f8cc092cc6fe0ed76306eae23af21b2a66213461cbb04ed3 key=GOOGLE_STUDIO_API_KEY replacements=10 evidence=7 paired_evidence=13
+processed 23/33 42518c527a941610268fefa9410a1bd3ee31cb89fa30557f2414c2c3610c0464 key=GOOGLE_STUDIO_API_KEY_3 replacements=14 evidence=14 paired_evidence=28
+waiting: GOOGLE_STUDIO_API_KEY_3 HTTP 500; retry in 300 seconds for e8f1153f9ae86b1a694975bde7d9e1129cfebadaf1f386720863672420f5ed30
+api-detail: GOOGLE_STUDIO_API_KEY_3 INTERNAL: Internal error encountered.
+processed 32/33 25a80c938975d0218d23a9fd7fc03a0faefd062f9e8fed2244a30a9245cb0c1c key=GOOGLE_STUDIO_API_KEY replacements=11 evidence=2 paired_evidence=5
+waiting: GOOGLE_STUDIO_API_KEY_3 HTTP 500; retry in 600 seconds for e8f1153f9ae86b1a694975bde7d9e1129cfebadaf1f386720863672420f5ed30
+api-detail: GOOGLE_STUDIO_API_KEY_3 INTERNAL: Internal error encountered.
+waiting: GOOGLE_STUDIO_API_KEY_3 HTTP 500; retry in 1200 seconds for e8f1153f9ae86b1a694975bde7d9e1129cfebadaf1f386720863672420f5ed30
+api-detail: GOOGLE_STUDIO_API_KEY_3 INTERNAL: Internal error encountered.
+skipped-transient 33/33 e8f1153f9ae86b1a694975bde7d9e1129cfebadaf1f386720863672420f5ed30 key=GOOGLE_STUDIO_API_KEY_3
+{
+  "documents": 902,
+  "selected": 33,
+  "scope": "pending",
+  "workers": 2,
+  "keys": [
+    "GOOGLE_STUDIO_API_KEY",
+    "GOOGLE_STUDIO_API_KEY_3"
+  ],
+  "output": "C:\\Users\\user\\Desktop\\coding\\LAWRENCE\\data\\intermediate\\google_ai\\hybrid_judgments_gemma4_experiment.jsonl"
+}

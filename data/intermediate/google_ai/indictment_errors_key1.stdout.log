@@ -1,0 +1,34 @@
+workers=1 keys=GOOGLE_STUDIO_API_KEY
+skipped-empty 1/24 46c7d56bce184acd8f9b59f19dda5162
+processed 2/24 65ae80304454488286615b6cd391f5ff replacements=17 evidence=19
+skipped-oversize 3/24 41787a13d1db48aa9f5d8f1f56f58525 chars=30914
+skipped-empty 4/24 92f62e2e89524a7e8183512d6e1b5048
+skipped-empty 5/24 75469f8f487046a68f13c07e14e34a2b
+skipped-oversize 6/24 75961d7d1b564d03a1a89daa45d1c9e0 chars=24095
+skipped-empty 7/24 04f18e9d272647d4a00f0818ef025b28
+processed 8/24 1554eeec3849443a9e0679e6dd390fb4 replacements=13 evidence=13
+processed 9/24 292b4103c19644348e253e40781a0735 replacements=18 evidence=17
+processed 10/24 3b5e651e580c40f982bf715bd35c9cdb replacements=4 evidence=6
+skipped-empty 11/24 440e02be40ce4d65ad05d0ae1780185a
+processed 12/24 4ac6516783a8450b9ebe73aa3656e927 replacements=9 evidence=7
+processed 13/24 57cf30b4aff24334beccf36de0eaa5ac replacements=8 evidence=10
+processed 14/24 65db9dcdbfa14af3ba5cc15188c6db71 replacements=12 evidence=14
+processed 15/24 74eca1497f8546fda6a6d6767ba28a98 replacements=7 evidence=7
+processed 16/24 86c9a87521ec42aba4ddfbb73329df48 replacements=5 evidence=4
+processed 17/24 981e60dbbc0b4f12a301c4e1a381c589 replacements=5 evidence=8
+skipped-empty 18/24 996306cd50814b64ae0c27ebb152770f
+skipped-empty 19/24 a4cbd4323aab4d5582afb60271e5810e
+skipped-empty 20/24 b9e3f48d70e042549748a9401d8ebb0d
+skipped-empty 21/24 c22f84227968407ea00e60a23a02aea4
+skipped-empty 22/24 c410a0c36d454d20af6318455477dc5e
+waiting: GOOGLE_STUDIO_API_KEY HTTP 429; retry in 300 seconds for e8b925352e00459e9d8dc89554b94bd1
+rate-limit-detail: GOOGLE_STUDIO_API_KEY RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. * Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_paid_tier_input_token_count, limit: 16000, model: gemma-4-31b Please retry in 10.751224992s.
+processed 23/24 e8b925352e00459e9d8dc89554b94bd1 replacements=7 evidence=6
+skipped-empty 24/24 f280613e3a8e48ffae4ba739375acc92
+{
+  "documents": 927,
+  "selected": 24,
+  "scope": "errors",
+  "workers": 1,
+  "output": "C:\\Users\\user\\Desktop\\coding\\LAWRENCE\\data\\intermediate\\google_ai\\hybrid_gemma4_experiment.jsonl"
+}

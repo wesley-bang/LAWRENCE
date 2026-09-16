@@ -1,0 +1,9 @@
+eligible=746 selected=737 workers=1 keys=GOOGLE_STUDIO_API_KEY_2 model=gemini-3.8-flash
+skipped-transient 1/737 4d998d11b2be4388976eb2afafb2b3b0 key=GOOGLE_STUDIO_API_KEY_2
+skipped-transient 2/737 2cad2263b6e545309a8deda6ee9afc9b key=GOOGLE_STUDIO_API_KEY_2
+skipped-transient 3/737 7a1da2eaa30d4d6e9c942e9d2e46071c key=GOOGLE_STUDIO_API_KEY_2
+skipped-transient 4/737 fb266acdde1d40568a63fd41c75fb9d6 key=GOOGLE_STUDIO_API_KEY_2
+skipped-transient 5/737 5c62a32cf660452c99e439e3f3b8e5cf key=GOOGLE_STUDIO_API_KEY_2
+skipped-transient 6/737 08428434fd924d13937719230ab17fef key=GOOGLE_STUDIO_API_KEY_2
+waiting: GOOGLE_STUDIO_API_KEY_2 HTTP 429; retry in 62 seconds for 404c5b5f477b4405a171915df4469971
+api-detail: GOOGLE_STUDIO_API_KEY_2 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. * Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.8-flash Please retry in 59.477819497s.
